@@ -1,0 +1,6 @@
+[nitondev]
+fqdn = archive.niton.dev
+method = ssh
+incoming = /incoming
+login = nitondev
+allow_unsigned_uploads = 0
