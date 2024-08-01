@@ -1,0 +1,15 @@
+Package: niton-test
+Version: 1.0
+Architecture: all
+Maintainer: Lord Hackwell <lordhck@niton.dev>
+Depends: bash
+Filename: pool/main/n/niton-test-1.0_amd64.deb
+Size: 652
+MD5sum: a5681aadaee41620c39515f6b06f4844
+SHA1: d7d5f08fe8e82cc70e4003b81d2bf6320e4a70c9
+SHA256: 953eda2e8a03c0c9dcdddc6cb276cbfa20899a6415f86701a7dc3b3640a3057a
+Section: base
+Priority: optional
+Description: Niton Test Script
+ This is a simple test script for demonstrating package creation.
+
