@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+</head>
+<body>
+    <h1>404 Not Found</h1>
+    <p>The requested URL <span id="path">/path</span> was not found on this server.<br>You'll be redirected after <span id="countdown">5</span> sec.</p>
+
+    <script>
+      const urlPath = window.location.pathname;
+
+      const pathElement = document.getElementById('path');
+      pathElement.textContent = urlPath;
+
+      var timeleft = 4;
+      var redirectTimer = setInterval(function(){
+      	if(timeleft <= 0){
+      		clearInterval(redirectTimer);
+      		window.location.href = "https://archive.niton.dev/";
+		} else {
+			document.getElementById("countdown").innerHTML = timeleft;
+		}
+		timeleft -= 1;
+	  }, 1000);
+    </script>
+</body>
+</html>
