@@ -43,7 +43,20 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 <a href="https://github.com/nitondev">NITON</a></p>
+        <p>&copy; 2024 <a href="https://github.com/nitondev">NITON</a> <span id="version"></span></p>
     </footer>
+<script>
+    const apiUrl = "https://api.github.com/repos/nitondev/archive/commits/main";
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const sha = data.sha;
+        const commitUrl = `https://github.com/nitondev/archive/commit/${sha}`;
+        const link = `<a href="${commitUrl}">${sha.substring(0, 7)}</a>`;
+        document.getElementById('version').innerHTML = `version: ${link}`;
+      })
+      .catch(error => console.error('Error fetching the commit data:', error));
+</script>
 </body>
 </html>
